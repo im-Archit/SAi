@@ -9,8 +9,22 @@ import dynamic from "next/dynamic";
 const Footer = dynamic(() => import("@/components/footer"),  { ssr: false });
 
 export const metadata: Metadata = {
-  title: "SqueakyAI",
-  description: "AI-powered data cleaning solution",
+  title: "Enterprise Data Cleaning | AI-Powered Solutions",
+  icons: "/logo.ico",
+  description: "AI-driven data cleaning for enterprises. Improve data accuracy, remove inconsistencies, and automate cleaning processes.",
+  openGraph: {
+    title: "Enterprise Data Cleaning | AI-Powered Solutions",
+    description: "We provide enterprise-level AI-powered data cleaning solutions.",
+    type: "website",
+    url: "https://squeakyai.com",
+    images: [{ url: "/logo.png" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Enterprise Data Cleaning | AI-Powered Solutions",
+    description: "Automated data cleaning for businesses using AI technology.",
+    images: ["/SqueakyLogo.png"],
+  },
 }
 
 export default function RootLayout({
